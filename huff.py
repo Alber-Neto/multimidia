@@ -238,6 +238,11 @@ def main():
              print(f"desComprimido com sucesso: {os.path.getsize(args.arquivo + '.dec')} bytes")
              
         return
+
+        if args.f:
+            args.arquivo =args.arquivo
+        return args.arquivo
+
 if __name__ == "__main__":
     main()
 
