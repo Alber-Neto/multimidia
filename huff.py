@@ -152,12 +152,13 @@ def to_ascii(text):
 
 def main():
         # Cria um objeto parser para lidar com os argumentos passados via linha de comando
-        parser = argparse.ArgumentParser(description="Compressão deHuffman - Análise de frequência de símbolos e compressão de Huffman")
+        parser = argparse.ArgumentParser(description="Descrição do programa")
         # Adiciona argumentos ao parser
         parser.add_argument("arquivo", type=str, help="Arquivo a ser processado (comprimido, descomprimido ou para apresentar a tabela de símbolos)")
         parser.add_argument("-s", action="store_true", help="Realiza apenas a análise de frequência e imprime a tabela de símbolos")
         parser.add_argument("-c", action="store_true", help="Realiza a compressão")
         parser.add_argument("-d", action="store_true", help="Realiza a descompressão")
+        parser.add_argument("-f", action="store_true",help="<file> Indica o arquivo a ser processado (comprimido, descomprimido ou para apresentar a tabela de símbolos)")
         # Faz o parser dos argumentos passados via linha de comando
         args = parser.parse_args()
         # Verifica se o argumento -s foi passado
